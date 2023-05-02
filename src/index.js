@@ -8,7 +8,7 @@ import {ThemeProvider} from '@mui/material'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export const baseUrl = 'http://localhost:3001'
+export const baseUrl = 'https://your-exp-api.onrender.com'
 
 root.render(
 <ThemeProvider theme={theme} >

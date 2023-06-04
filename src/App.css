@@ -17,7 +17,6 @@ body {
 .App-logo {
   position: static;
   display: block;
-  box-shadow: 0 0 black 2px 2px;
   margin-bottom: -6px;
   margin-top: -2px;
   height: 90px;

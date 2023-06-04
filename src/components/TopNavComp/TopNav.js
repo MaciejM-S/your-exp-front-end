@@ -76,10 +76,10 @@ const TopNav = () => {
   // const info = context.avatar && context.avatar.info;
   // const avatar = context && context.avatar && context.avatar.avatar;
   // const tabValue = context && context.mainMenuValue ? context.mainMenuValue : 1;
-  // console.log = console.warn = console.error = () => {};
+  console.log = console.warn = console.error = () => {};
 
 
-  
+
   return (
     <div>
       <DesktopNav

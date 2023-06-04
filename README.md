@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Your-Exp Front-End
+This repository contains the client-side application for Your-Exp, a FullStack networking web application. The application is deployed at:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## https://your-exp.onrender.com
 
-## Available Scripts
+The front-end of the application has been developed using React and MUI (Material-UI). It allows users to create a profile, share and interact with content, and connect with friends and family through adding posts, pictures, and commenting on them.
 
-In the project directory, you can run:
+The application has been deployed on Render as a static website, providing a seamless and efficient user experience.
 
-### `npm start`
+## Dummy Account Information
+To explore the functionalities of the application, you can use the following dummy account:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login: dummyuser@wp.pl (copy and paste thie email)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Password: smith1234 (copy and paste thie password)
 
-### `npm test`
+Feel free to log in with these credentials and navigate through the application to get a better understanding of its features.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### This FullStack networking web application allows users to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create profiles
+- Share and interact with content
+- Connect with friends and family through adding posts, pictures, and commenting on them
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Users can also:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Manage their profile details
+- Search for other users using the search engine
+- Restrict the visibility of their posts to friends
 
-### `npm run eject`
+### The application provides features to:
+- Add and remove friends easily
+- Enhance the social networking experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Structure of /src directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+            └── src
+                ├── assets
+                │   ├── add.png
+                │   ├── main.jpg
+                │   └── noAvatar.png
+                ├── components
+                │   ├── Error
+                │   │   ├── Error.js
+                │   │   └── NotFound.js
+                │   ├── Friends
+                │   │   ├── Blocked
+                │   │   │   ├── Blocked.js
+                │   │   │   └── blockedStyle.js
+                │   │   ├── Friends.js
+                │   │   ├── FriendsMobile.js
+                │   │   └── friendsStyle.js
+                │   ├── Home
+                │   │   └── HomeFeed.js
+                │   ├── Init
+                │   │   ├── ForgottenPassword
+                │   │   │   ├── Email.js
+                │   │   │   ├── ForgottenPassword.js
+                │   │   │   └── forgottenPasswordStyle.js
+                │   │   ├── RegisterMenu
+                │   │   │   ├── Email.js
+                │   │   │   ├── RegisterMenu.js
+                │   │   │   └── registerMenuStyle.js
+                │   │   └── SignInMenu
+                │   │       ├── Email.js
+                │   │       ├── SignInMenu.js
+                │   │       └── signInMenuStyle.js
+                │   └── Profile
+                │       ├── Profile.js
+                │       └── profileStyle.js
+                ├── functions
+                |   ├── addCommente.js
+                |   ├── errorHandler.js
+                |   ├── validateEmail.js
+                │   └── validation.js
+                ├── styles
+                |   └── personTypography.js
+                ├── App.css
+                ├── App.js
+                ├── App.test.js
+                ├── index.css
+                ├── index.js
+                ├── reportWebVitals.js
+                ├── setupTests.js
+                ├── StyledCustomization.js
+                └── theme.js

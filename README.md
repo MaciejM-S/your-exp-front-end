@@ -47,30 +47,68 @@ Feel free to log in with these credentials and navigate through the application 
                 │   │   ├── Error.js
                 │   │   └── NotFound.js
                 │   ├── Friends
-                │   │   ├── Blocked
-                │   │   │   ├── Blocked.js
-                │   │   │   └── blockedStyle.js
-                │   │   ├── Friends.js
-                │   │   ├── FriendsMobile.js
-                │   │   └── friendsStyle.js
-                │   ├── Home
-                │   │   └── HomeFeed.js
-                │   ├── Init
-                │   │   ├── ForgottenPassword
-                │   │   │   ├── Email.js
-                │   │   │   ├── ForgottenPassword.js
-                │   │   │   └── forgottenPasswordStyle.js
-                │   │   ├── RegisterMenu
-                │   │   │   ├── Email.js
-                │   │   │   ├── RegisterMenu.js
-                │   │   │   └── registerMenuStyle.js
-                │   │   └── SignInMenu
-                │   │       ├── Email.js
-                │   │       ├── SignInMenu.js
-                │   │       └── signInMenuStyle.js
-                │   └── Profile
-                │       ├── Profile.js
-                │       └── profileStyle.js
+                |            ├── Blocked
+                |            │   ├── Blocked.js
+                |            │   └── blockedStyle.js
+                |            ├── FriendsList
+                |            │   ├── FriendsList.js
+                |            │   ├── friendsListStyle.js
+                |            │   └── Modals
+                |            │       ├── BlockModal.js
+                |            │       └── RemoveModal.js
+                |            ├── Invitations
+                |            │   ├── Invitations.js
+                |            │   ├── invitationsStyle.js
+                |            │   └── BlockModal
+                |            │       └── BlockModal.js
+                |            └── Person
+                |                ├── Person.js
+                |                ├── PersonInfoPanel.js
+                |                ├── personStyle.js
+                |                ├── RelationMarker.js
+                |                ├── Modals
+                |                │   ├── BlockModal.js
+                |                │   └── RemoveModal.js
+                |                ├── PersonFriends
+                |                │   ├── PersonFriends.js
+                |                │   └── personFriendsStyle.js
+                |                ├── PersonPictures
+                |                │   └── PersonPictures.js
+                |                └── PersonPosts
+                |                    ├── PersonPosts.js
+                |                    └── PersonPost
+                |                        ├── CommentInput.js
+                |                        ├── PersonPost.js
+                |                        ├── personPostStyle.js
+                |                        └── PostTopBar.js                        
+                |   |── Home
+                |              ├── Contacts
+                |              │     └── Contacts.js
+                |              └── Posts
+                |                   ├── Post
+                |                   │   ├── CommentsLabel.js
+                |                   │   ├── Post.js
+                |                   │   ├── PostHeader.js
+                |                   │   ├── postStyle.js
+                |                   │   └── PostTopBar.js
+                |                            └── Posts.js    
+                |   └── Init
+                |             ├── ForgottenPassword
+                |                   │   ├── Email.js
+                |                   │   ├── ForgottenPassword.js
+                |                   │   └── forgottenPasswordStyle.js
+                |             ├── RegisterMenu
+                |                   │   ├── Email.js
+                |                   │   ├── FirstLastName.js
+                |                   │   ├── Password.js
+                |                   │   ├── RegisterMenu.js
+                |                   │   ├── registerMenuStyle.js
+                |                   │   └── SubmitButton.js
+                |                   └── SignInMenu
+                |                        ├── Email.js
+                |                        ├── Password.js
+                |                        ├── SignInMenu.js
+                |                        └── signInMenuStyle.js
                 ├── functions
                 |   ├── addCommente.js
                 |   ├── errorHandler.js

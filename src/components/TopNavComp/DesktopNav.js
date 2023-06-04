@@ -71,8 +71,8 @@ const DesktopNav = (props) => {
 
   function NavTabs() {
     return (<Tabs
-      disabled={true}
-      value={context.authenticated ? context.mainMenuValue : -1}
+    disabled={true}
+      value={context.authenticated?context.mainMenuValue:-1}
       onChange={props.handleChange}
       aria-label="icon tabs example"
       sx={{
@@ -88,12 +88,12 @@ const DesktopNav = (props) => {
         aria-label="home"
         iconPosition="end"
       />
-      <Tab icon={<GroupIcon />}
-        disabled={!context.authenticated}
-        aria-label="favorite" sx={tabStyle} />
-      <Tab icon={<PersonPinIcon />}
-        disabled={!context.authenticated}
-        aria-label="person" sx={tabStyle} />
+      <Tab icon={<GroupIcon />} 
+      disabled={!context.authenticated}
+      aria-label="favorite" sx={tabStyle} />
+      <Tab icon={<PersonPinIcon />} 
+      disabled={!context.authenticated}
+      aria-label="person" sx={tabStyle} />
     </Tabs>);
   }
 
@@ -112,22 +112,22 @@ const DesktopNav = (props) => {
         <Box>
           <img src={logo} className="App-logo" alt="logo" />
         </Box>
-        {context.authenticated && <MainSearch />}
-
+        {context.authenticated&&<MainSearch />}
+        
         <StyledToolbar>
           <Box display={"flex"} sx={sTBoxStyle}>
-            {context.authenticated && <NavTabs />}
-
-            {context.authenticated && <AddCircleIcon
+            {context.authenticated&&<NavTabs />}
+            
+            {context.authenticated&& <AddCircleIcon
               sx={addCircleIconStyle}
               onClick={() => {
                 console.log(!context.authenticated);
-                if (!context.authenticated) { return }
+                if(!context.authenticated){return}
                 props.setOpenAddDesktop(true);
               }}
             />}
-
-
+            
+           
           </Box>
         </StyledToolbar>
         <Box
@@ -139,7 +139,7 @@ const DesktopNav = (props) => {
             },
           }}
         >
-          {context.avatar && <UserCardBox />}
+          {context.avatar &&<UserCardBox/>}
           <QuickMenu
             open={props.open}
             setOpen={props.setOpen}

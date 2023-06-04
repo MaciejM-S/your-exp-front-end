@@ -91,8 +91,7 @@ const MobileNav = (props) => {
           >
             {context.authenticated&&
             <MainSearch />}
-            {context.authenticated&&
-            <NavTabs />}
+            <NavTabs />
             {context.authenticated&& <AddCircleIcon
               sx={mobileAddCircleStyle}
               onClick={() => {

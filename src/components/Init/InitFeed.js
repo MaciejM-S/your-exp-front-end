@@ -1,6 +1,6 @@
 import { React, useRef, useState, useEffect, useContext } from "react";
-import { ThemeProvider, styled } from "@mui/material/styles";
-import { Paper, Button, ButtonGroup, Box, Typography } from "@mui/material";
+import {ThemeProvider, styled } from "@mui/material/styles";
+import { Paper, Button, ButtonGroup, Box } from "@mui/material";
 import { theme } from "../../theme";
 import Typewriter from "typewriter-effect";
 import LoginIcon from "@mui/icons-material/Login";
@@ -9,7 +9,7 @@ import SignInMenu from "./SignInMenu/SignInMenu";
 import RegisterMenu from "./RegisterMenu/RegisterMenu";
 import ForgottenPassword from "./ForgottenPassword/ForgottenPassword";
 import Axios from "axios";
-import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgressComponent from "./../Universal/CircularProgressComponent";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../App";
 import initFeedStyle from './initFeedStyle'
@@ -41,7 +41,7 @@ function InitFeed() {
   const navigate = useNavigate();
   const context = useContext(Context);
   const paper = useRef();
-  const config = {
+   const config = {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
@@ -57,7 +57,7 @@ function InitFeed() {
   const handleCloseSignIn = () => setOpenSignIn(false);
   const handleOpenRegister = () => setOpenRegister(true);
   const handleCloseRegister = () => setOpenRegister(false);
-  const handleCloseForgotten = () => setOpenForgotten(false);
+  const handleCloseForgotten= () => setOpenForgotten(false);
   const openForgottenPassword = () => setOpenForgotten(true);
   const openRegSignIn = () => {
     setOpenRegister(false);
@@ -67,25 +67,27 @@ function InitFeed() {
   useEffect(() => {
     Axios.get(baseUrl
       + "/init", config).then((response) => {
-        if (response.data !== "notLogged") {
-          setUserFirstName(response.data);
-          setUserStatus(true);
-        }
-        setLoading(false);
-      });
+      if (response.data !== "notLogged") {
+        setUserFirstName(response.data);
+        setUserStatus(true);
+      }
+      setLoading(false);
+    });
   }, []);
 
   if (loading) {
     return (
       <>
-        <Paper
-          sx={{ ...paperStyle, width: '75%', maxWidth: '700px', m: 0, position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+        <Box
+          sx={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
         >
-          <Typography sx={{ mt: 4, fontSize: 20, [theme.breakpoints.down(500)]: { fontSize: 14 } }} >
-            We are preparing our server. <br /> This task may require a maximum of one minute to complete.
-          </Typography>
-          <LinearProgress sx={{ m: 8 }} />
-        </Paper>
+          <CircularProgressComponent />
+        </Box>
       </>
     );
   }
@@ -136,10 +138,10 @@ function InitFeed() {
                   Register
                 </ButtonMain>
               </ButtonGroup>
-              <SignInMenu
-                open={openSignIn}
-                handleClose={handleCloseSignIn}
-                openForgottenPassword={openForgottenPassword}
+              <SignInMenu 
+              open={openSignIn} 
+              handleClose={handleCloseSignIn} 
+              openForgottenPassword={openForgottenPassword}
               />
               <RegisterMenu
                 open={openRegister}
@@ -148,7 +150,7 @@ function InitFeed() {
               />
               <ForgottenPassword
                 handleClose={handleCloseForgotten}
-                open={openForgotten}
+              open={openForgotten}
               />
             </Box>
           </Paper>
